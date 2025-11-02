@@ -42,7 +42,9 @@ Array.from(boxes).forEach(element => {
           
             checkWin();
             if(!gameover){
-           document.getElementsByClassName("info")[0].innerText = "Turn for " + turn; }
+           document.getElementsByClassName("info")[0].innerText = "Turn for " + turn;
+        
+        }
          
         }
     })
