@@ -26,7 +26,7 @@ const checkWin = () => {
        if((boxtext[e[0]].innerText === boxtext[e[1]].innerText) && (boxtext[e[2]].innerText === boxtext[e[1]].innerText) && (boxtext[e[0]].innerText !== ''))
        {  document.querySelector('.info').innerText = boxtext[e[0]].innerText + " you did a great job! whohoooo 👏"
          gameover = true
-         document.querySelector('.imgbox').getElementsByTagName('img')[0].style.width = "200px";
+         document.getElementById("winGif").style.display = "block";
        }
 })
 }
@@ -43,7 +43,7 @@ Array.from(boxes).forEach(element => {
             checkWin();
             if(!gameover){
            document.getElementsByClassName("info")[0].innerText = "Turn for " + turn;
-        
+           
         }
          
         }
@@ -59,6 +59,6 @@ Array.from(boxes).forEach(element => {
         turn = "X";
         gameover = false;
         document.getElementsByClassName("info")[0].innerText = "Turn for " + turn; 
-        document.querySelector('.imgbox').getElementsByTagName('img')[0].style.width = "0px";
+     document.getElementById("winGif").style.display = "none";
     })
 })
